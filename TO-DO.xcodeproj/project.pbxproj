@@ -23,6 +23,7 @@
 		F027AF962CD14A1D00AE1859 /* ToDoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027AF952CD14A1D00AE1859 /* ToDoListItemViewViewModel.swift */; };
 		F027AF982CD14A3E00AE1859 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027AF972CD14A3E00AE1859 /* RegisterViewViewModel.swift */; };
 		F027AF9A2CD1540E00AE1859 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027AF992CD1540E00AE1859 /* HeaderView.swift */; };
+		F027AF9C2CD1623600AE1859 /* BigButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027AF9B2CD1623600AE1859 /* BigButtonView.swift */; };
 		F0A30A922CD14189000B9C93 /* TO_DOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A30A912CD14189000B9C93 /* TO_DOApp.swift */; };
 		F0A30A942CD14189000B9C93 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A30A932CD14189000B9C93 /* MainView.swift */; };
 		F0A30A962CD1418B000B9C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A30A952CD1418B000B9C93 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		F027AF952CD14A1D00AE1859 /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
 		F027AF972CD14A3E00AE1859 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		F027AF992CD1540E00AE1859 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F027AF9B2CD1623600AE1859 /* BigButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonView.swift; sourceTree = "<group>"; };
 		F0A30A8E2CD14189000B9C93 /* TO-DO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TO-DO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A30A912CD14189000B9C93 /* TO_DOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TO_DOApp.swift; sourceTree = "<group>"; };
 		F0A30A932CD14189000B9C93 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				F027AF832CD1493D00AE1859 /* RegisterView.swift */,
 				F027AF852CD1496200AE1859 /* ToDoListItemView.swift */,
 				F027AF992CD1540E00AE1859 /* HeaderView.swift */,
+				F027AF9B2CD1623600AE1859 /* BigButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				F027AF822CD1491D00AE1859 /* LoginView.swift in Sources */,
 				F027AF9A2CD1540E00AE1859 /* HeaderView.swift in Sources */,
 				F027AF922CD149EF00AE1859 /* LoginViewViewModel.swift in Sources */,
+				F027AF9C2CD1623600AE1859 /* BigButtonView.swift in Sources */,
 				F027AF982CD14A3E00AE1859 /* RegisterViewViewModel.swift in Sources */,
 				F027AF962CD14A1D00AE1859 /* ToDoListItemViewViewModel.swift in Sources */,
 				F0A30A942CD14189000B9C93 /* MainView.swift in Sources */,

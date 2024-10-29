@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct RegisterView: View {
+  
+    @State var name = ""
+    @State var email = ""
+    @State var password = ""
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack{
+                HeaderView()
+                
+                Form{
+                    Section(header: Text("Kayıt Formu")) {
+                        TextField("Kullanıcı Adınız ", text: $name)
+                        TextField("Email adresiniz", text: $email)
+                        SecureField("Şifeniz", text: $password)
+                        
+                    }
+                }
+                .frame(height: 200)
+                BigButton(title: "Kayıt Ol", action: {})
+                 Spacer()            }
+        }
+        
+        
     }
 }
 

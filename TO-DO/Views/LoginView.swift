@@ -45,7 +45,7 @@ struct LoginView: View {
                         .tint(.purple)
 
                 }
-                
+                .padding(.bottom,150)
                
                 
             }
