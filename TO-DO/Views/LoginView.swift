@@ -9,10 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
   
-    @State var email = ""
-   @State var password = ""
+    @StateObject var viewModel = LoginViewViewModel()
   
-    
     var body: some View {
         NavigationStack{
             VStack{
@@ -20,23 +18,21 @@ struct LoginView: View {
                 HeaderView()
              
                 Form{
-                    TextField("Email Adresiniz", text: $email)
-                    SecureField("Şifreniz", text: $password)
+                    if !viewModel.errorMessage.isEmpty{
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(.red)
+                    }
+                    TextField("Email Adresiniz", text: $viewModel.email)
+                        .autocorrectionDisabled()
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    SecureField("Şifreniz", text: $viewModel.password)
     
                 }
-                .frame(height: 150)
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                   ZStack {
-                        RoundedRectangle(cornerRadius: 3)
-                            .foregroundStyle(
-                                .primary)
-                            .tint(.purple)
-                        Text("Giriş Yap")
-                           .foregroundStyle(.white)
-                    }
-                })
-                .frame(height: 50)
-                .padding(.horizontal)
+                .frame(height: 200)
+                BigButton(title: "Giriş Yap"){
+                    viewModel.login()
+                }
+                
                  Spacer()
                 
                 VStack{

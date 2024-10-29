@@ -9,9 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
   
-    @State var name = ""
-    @State var email = ""
-    @State var password = ""
+   @StateObject var viewModel = RegisterViewViewModel()
     
     
     var body: some View {
@@ -20,16 +18,26 @@ struct RegisterView: View {
                 HeaderView()
                 
                 Form{
+                    if !viewModel.errorMessage.isEmpty{
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(.red)
+                    }
                     Section(header: Text("Kayıt Formu")) {
-                        TextField("Kullanıcı Adınız ", text: $name)
-                        TextField("Email adresiniz", text: $email)
-                        SecureField("Şifeniz", text: $password)
+                        TextField("Kullanıcı Adınız ", text: $viewModel.name)
+                            .autocorrectionDisabled()
+                        TextField("Email adresiniz", text: $viewModel.email)
+                            .autocorrectionDisabled()
+                            .autocapitalization(.none)
+                        SecureField("Şifeniz", text: $viewModel.password)
                         
                     }
                 }
-                .frame(height: 200)
-                BigButton(title: "Kayıt Ol", action: {})
-                 Spacer()            }
+                .frame(height: 250)
+                BigButton(title: "Kayıt Ol", action: viewModel.register)
+                Spacer()
+            }
+    
+            
         }
         
         
